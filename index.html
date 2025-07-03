@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Race Position Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center mb-4">🏁 Race Finishing Position Predictor</h2>
+      <form method="POST">
+        <div class="row g-3">
+          {% for field in [
+            'grid', 'driverId', 'constructorId', 'statusId', 'laps',
+            'milliseconds', 'fastestLap', 'rank', 'fastestLapTime', 'fastestLapSpeed'
+          ] %}
+            <div class="col-md-6">
+              <label class="form-label">{{ field }}</label>
+              <input type="number" step="any" class="form-control" name="{{ field }}" required>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="mt-4 text-center">
+          <button type="submit" class="btn btn-primary px-4">Predict</button>
+        </div>
+      </form>
+      {% if prediction is not none %}
+        <div class="alert alert-info mt-4 text-center">
+          <h4>Predicted Finishing Position: <strong>{{ prediction }}</strong></h4>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>
