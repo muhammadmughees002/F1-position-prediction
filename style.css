@@ -1,0 +1,55 @@
+body {
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+h2 {
+  font-weight: 600;
+  color: #f8f9fa;
+}
+
+.form-label {
+  color: #f1f1f1;
+}
+
+input.form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+}
+
+input.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.btn-primary {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.alert-info {
+  background-color: rgba(0, 123, 255, 0.2);
+  border-color: rgba(0, 123, 255, 0.3);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
